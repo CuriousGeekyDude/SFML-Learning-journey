@@ -7,7 +7,7 @@
 class Window
 {
 public:
-	Window();
+	Window() = default;
 	Window(const std::string& l_title, const sf::Vector2u& l_size);
 
 	~Window();
@@ -22,10 +22,13 @@ public:
 	void Draw(sf::Drawable& l_drawable);
 
 private:
+
 	void Setup(const std::string& l_title,
 		const sf::Vector2u& l_size);
+
 	void Destroy();
 	void Create();
+
 	sf::RenderWindow m_window;
 	sf::Vector2u m_windowSize;
 	std::string m_windowTitle;
