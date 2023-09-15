@@ -10,6 +10,7 @@ SpriteBounceGame::SpriteBounceGame()
 void SpriteBounceGame::HandleInput()
 {
 	LoadFileTexture("C:/Users/farhan/Desktop/SFML_stuff/mosques.jpg", sf::IntRect(0, 0, 100, 150));
+	m_sprite = sf::Sprite(*m_texture);
 
 }
 
