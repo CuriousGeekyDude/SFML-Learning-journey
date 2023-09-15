@@ -15,7 +15,7 @@ public:
 	void Update();
 	void Render();
 
-
+	Window* GetWindow();
 private:
 
 	void LoadFileTexture(const std::string& l_locationTexture, const sf::IntRect& l_area);
