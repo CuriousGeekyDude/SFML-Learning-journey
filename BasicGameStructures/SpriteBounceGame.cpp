@@ -51,7 +51,7 @@ void SpriteBounceGame::SetTransparencySprite(sf::Sprite& l_sprite)
     l_sprite.setColor(color);
 }
 
-void SpriteBounceGame::SpriteHitBoundary_Y()
+void SpriteBounceGame::SpriteHitBoundary_X()
 {
     const float xPos = m_sprite.getPosition().x;
 
