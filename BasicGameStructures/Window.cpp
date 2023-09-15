@@ -37,6 +37,11 @@ bool Window::IsDone()
 	return m_isDone;
 }
 
+bool Window::IsFullscreen()
+{
+	return m_isFullscreen;
+}
+
 void Window::ToggleFullscreen()
 {
 	m_isFullscreen = !m_isFullscreen;
