@@ -44,3 +44,10 @@ void SpriteBounceGame::SetTransparency(sf::Color& l_color)
     }
 }
 
+void SpriteBounceGame::SetTransparencySprite(sf::Sprite& l_sprite)
+{
+    sf::Color color = l_sprite.getColor();
+    SetTransparency(color);
+    l_sprite.setColor(color);
+}
+
