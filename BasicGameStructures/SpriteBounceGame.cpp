@@ -9,5 +9,11 @@ SpriteBounceGame::SpriteBounceGame()
 
 void SpriteBounceGame::HandleInput()
 {
+	
+}
 
+
+void SpriteBounceGame::LoadFileTexture(const std::string& l_locationTexture, const sf::IntRect& l_area)
+{
+	m_texture->loadFromFile(l_locationTexture, l_area);
 }
