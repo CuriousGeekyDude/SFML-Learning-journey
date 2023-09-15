@@ -42,6 +42,11 @@ bool Window::IsFullscreen()
 	return m_isFullscreen;
 }
 
+sf::Vector2u Window::GetWindowSize()
+{
+	return m_windowSize;
+}
+
 void Window::ToggleFullscreen()
 {
 	m_isFullscreen = !m_isFullscreen;
