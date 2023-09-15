@@ -17,3 +17,9 @@ void Window::Setup(const std::string& l_title, const sf::Vector2u& l_size)
 	m_isFullscreen = false;
 	Create();
 }
+
+void Window::Destroy()
+{
+	m_window.close();
+}
+
