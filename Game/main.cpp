@@ -47,7 +47,7 @@ int main()
         return -1;
     }
     
-    auto size_texture = texture.getSize();
+    //auto size_texture = texture.getSize();
 
     sf::Sprite sprite(texture);
     

@@ -9,11 +9,15 @@ SpriteBounceGame::SpriteBounceGame()
 
 void SpriteBounceGame::HandleInput()
 {
-	
+	LoadFileTexture("C:/Users/farhan/Desktop/SFML_stuff/mosques.jpg", sf::IntRect(0, 0, 100, 150));
+
 }
 
 
 void SpriteBounceGame::LoadFileTexture(const std::string& l_locationTexture, const sf::IntRect& l_area)
 {
-	m_texture->loadFromFile(l_locationTexture, l_area);
+	if (!m_texture->loadFromFile(l_locationTexture, l_area)) {
+		throw - 1;
+	}
 }
+
