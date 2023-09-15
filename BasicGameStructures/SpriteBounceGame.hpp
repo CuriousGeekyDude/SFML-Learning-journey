@@ -26,6 +26,7 @@ private:
 	void SpriteMove();
 
 	Window* m_window = nullptr;
+	sf::Texture* texture = nullptr;
 	const float m_displacementX = 0.2f;
 	const float m_displacementY = 0.2f;
 	bool m_opaqueX = true;
