@@ -32,6 +32,10 @@ void Window::Update() {
 }
 
 
+bool Window::IsDone()
+{
+	return m_isDone;
+}
 
 void Window::ToggleFullscreen()
 {
