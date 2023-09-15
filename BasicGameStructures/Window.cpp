@@ -8,10 +8,13 @@ Window::Window(const std::string& l_title, const sf::Vector2u& l_size)
 
 void Window::BeginDraw()
 {
-	m_window.clear(sf::Color(50, 50, 50));
+	m_window.clear(sf::Color::Black);
 }
 
-
+void Window::EndDraw()
+{
+	m_window.display();
+}
 
 
 
