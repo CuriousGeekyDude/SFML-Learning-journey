@@ -15,6 +15,24 @@ void SpriteBounceGame::HandleInput()
 }
 
 
+void SpriteBounceGame::Update()
+{
+    m_window->Update();
+    SpriteHitBoundary_X();
+    SpriteHitBoundary_Y();
+
+    m_window->BeginDraw();
+    SpriteMove();
+}
+
+void SpriteBounceGame::Render()
+{
+    m_window->Draw(m_sprite);
+    m_window->EndDraw();
+}
+
+
+
 void SpriteBounceGame::LoadFileTexture(const std::string& l_locationTexture, const sf::IntRect& l_area)
 {
 	if (!m_texture->loadFromFile(l_locationTexture, l_area)) {
