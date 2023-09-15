@@ -71,3 +71,8 @@ void SpriteBounceGame::SpriteHitBoundary_Y()
     }
 }
 
+void SpriteBounceGame::SpriteMove()
+{
+    m_sprite.move(sf::Vector2f(m_displacementX, m_displacementY));
+}
+
