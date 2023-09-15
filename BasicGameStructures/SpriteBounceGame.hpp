@@ -30,6 +30,7 @@ private:
 
 	Window* m_window = nullptr;
 	sf::Texture* m_texture = nullptr;
+	sf::Sprite m_sprite;
 	const float m_displacementX = 0.2f;
 	const float m_displacementY = 0.2f;
 	bool m_opaqueX = true;
