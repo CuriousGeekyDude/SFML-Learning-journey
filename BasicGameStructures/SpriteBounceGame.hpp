@@ -9,7 +9,7 @@ class SpriteBounceGame
 {
 public:
 	SpriteBounceGame();
-	~SpriteBounceGame();
+	~SpriteBounceGame() {}
 
 	void HandleInput();
 	void Update();
