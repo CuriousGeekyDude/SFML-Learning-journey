@@ -20,7 +20,7 @@ private:
 
 	void LoadFileTexture(const std::string& l_locationTexture, const sf::IntRect& l_area);
 
-	void setTransparency(sf::Color& l_color);
+	void SetTransparency(sf::Color& l_color);
 	void SetTransparencySprite(sf::Sprite& l_sprite);
 
 	void SpriteHitBoundary_Y();

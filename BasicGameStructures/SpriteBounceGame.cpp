@@ -22,3 +22,25 @@ void SpriteBounceGame::LoadFileTexture(const std::string& l_locationTexture, con
 	}
 }
 
+void SpriteBounceGame::SetTransparency(sf::Color& l_color)
+{
+    if (m_opaqueX == false || m_opaqueY == false) {
+        l_color.a = 255;
+        if (m_opaqueX == false) {
+            m_opaqueX = true;
+        }
+        else {
+            m_opaqueY = true;
+        }
+    }
+    else {
+        l_color.a = 50;
+        if (m_opaqueX == true) {
+            m_opaqueX = false;
+        }
+        else {
+            m_opaqueY = false;
+        }
+    }
+}
+
