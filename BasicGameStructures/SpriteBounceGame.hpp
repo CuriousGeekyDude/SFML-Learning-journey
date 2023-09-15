@@ -25,7 +25,7 @@ private:
 
 	void SpriteMove();
 
-	Window* m_window;
+	Window* m_window = nullptr;
 	const float m_displacementX = 0.2f;
 	const float m_displacementY = 0.2f;
 	bool m_opaqueX = true;
