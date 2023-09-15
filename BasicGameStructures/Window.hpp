@@ -10,7 +10,7 @@ public:
 	Window() = default;
 	Window(const std::string& l_title, const sf::Vector2u& l_size);
 
-	~Window();
+	~Window(){}
 
 	void BeginDraw(); // Clear the window.
 	void EndDraw(); // Display the changes.
