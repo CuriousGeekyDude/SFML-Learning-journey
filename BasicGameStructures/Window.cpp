@@ -5,6 +5,16 @@ Window::Window(const std::string& l_title, const sf::Vector2u& l_size)
 	Setup(l_title, l_size);
 }
 
+
+void Window::BeginDraw()
+{
+	m_window.clear(sf::Color(50, 50, 50));
+}
+
+
+
+
+
 void Window::Update() {
 	sf::Event event;
 	while (m_window.pollEvent(event)) {
