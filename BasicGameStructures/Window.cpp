@@ -5,7 +5,18 @@ Window::Window(const std::string& l_title, const sf::Vector2u& l_size)
 	Setup(l_title, l_size);
 }
 
-
+void Window::Update() {
+	sf::Event event;
+	while (m_window.pollEvent(event)) {
+		if (event.type == sf::Event::Closed) {
+			m_isDone = true;
+		}
+		else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::F5)
+		{
+			ToggleFullscreen();
+		}
+	}
+}
 
 
 
