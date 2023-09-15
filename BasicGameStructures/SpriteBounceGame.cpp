@@ -32,6 +32,11 @@ void SpriteBounceGame::Render()
 }
 
 
+Window* SpriteBounceGame::GetWindow()
+{
+    return m_window;
+}
+
 
 void SpriteBounceGame::LoadFileTexture(const std::string& l_locationTexture, const sf::IntRect& l_area)
 {
