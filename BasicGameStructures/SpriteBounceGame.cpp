@@ -32,6 +32,18 @@ void SpriteBounceGame::Render()
 }
 
 
+void SpriteBounceGame::RestartClock()
+{
+    m_clock.restart();
+}
+
+
+sf::Time SpriteBounceGame::GetTimeElapsed()
+{
+    return m_timeElapsed;
+}
+
+
 Window* SpriteBounceGame::GetWindow()
 {
     return m_window;
