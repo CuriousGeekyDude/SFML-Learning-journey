@@ -26,7 +26,7 @@ private:
 	void SpriteHitBoundary_Y();
 	void SpriteHitBoundary_X();
 
-	void SpriteMove();
+	void SpriteMove(const sf::Time& l_time);
 
 	Window* m_window = nullptr;
 	sf::Texture* m_texture = nullptr;
