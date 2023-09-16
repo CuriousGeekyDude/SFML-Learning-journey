@@ -22,7 +22,7 @@ void SpriteBounceGame::Update()
     SpriteHitBoundary_Y();
 
     m_window->BeginDraw();
-    SpriteMove(m_clock.getElapsedTime());
+    SpriteMove();
 }
 
 void SpriteBounceGame::Render()
@@ -94,8 +94,8 @@ void SpriteBounceGame::SpriteHitBoundary_Y()
     }
 }
 
-void SpriteBounceGame::SpriteMove(const sf::Time& l_time)
+void SpriteBounceGame::SpriteMove()
 {
-    m_sprite.move(sf::Vector2f(m_displacementX*l_time.asSeconds(), m_displacementY * l_time.asSeconds()));
+    m_sprite.move(sf::Vector2f(m_displacementX*m_timeElapsed.asSeconds(), m_displacementY * m_timeElapsed.asSeconds()));
 }
 

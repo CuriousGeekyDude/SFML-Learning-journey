@@ -15,6 +15,9 @@ public:
 	void Update();
 	void Render();
 
+	void RestartClock();
+	sf::Time GetTimeElapsed();
+
 	Window* GetWindow();
 private:
 
