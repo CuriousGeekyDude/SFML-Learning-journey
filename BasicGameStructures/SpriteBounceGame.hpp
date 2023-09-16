@@ -31,6 +31,7 @@ private:
 	Window* m_window = nullptr;
 	sf::Texture* m_texture = nullptr;
 	sf::Sprite m_sprite;
+	sf::Clock m_clock;
 	float m_displacementX = 0.2f;
 	float m_displacementY = 0.2f;
 	bool m_opaqueX = true;
