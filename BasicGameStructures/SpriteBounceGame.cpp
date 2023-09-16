@@ -34,7 +34,7 @@ void SpriteBounceGame::Render()
 
 void SpriteBounceGame::RestartClock()
 {
-    m_clock.restart();
+    m_timeElapsed = m_clock.restart();
 }
 
 
