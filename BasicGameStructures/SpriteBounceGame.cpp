@@ -22,7 +22,7 @@ void SpriteBounceGame::Update()
     SpriteHitBoundary_Y();
 
     m_window->BeginDraw();
-    SpriteMove();
+    SpriteMove(m_clock.getElapsedTime());
 }
 
 void SpriteBounceGame::Render()
