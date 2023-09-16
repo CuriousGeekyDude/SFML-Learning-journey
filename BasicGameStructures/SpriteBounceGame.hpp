@@ -32,6 +32,7 @@ private:
 	sf::Texture* m_texture = nullptr;
 	sf::Sprite m_sprite;
 	sf::Clock m_clock;
+	sf::Time m_timeElapsed;	//The time it took for the previous main game loop to complete
 	float m_displacementX = 0.2f;
 	float m_displacementY = 0.2f;
 	bool m_opaqueX = true;
