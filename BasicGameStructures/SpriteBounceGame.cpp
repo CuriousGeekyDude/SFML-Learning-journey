@@ -108,6 +108,6 @@ void SpriteBounceGame::SpriteHitBoundary_Y()
 
 void SpriteBounceGame::SpriteMove()
 {
-    m_sprite.move(sf::Vector2f(m_displacementX*m_timeElapsed.asSeconds(), m_displacementY * m_timeElapsed.asSeconds()));
+    m_sprite.move(sf::Vector2f(m_displacementX * m_timeElapsed.asSeconds(), m_displacementY * m_timeElapsed.asSeconds()));
 }
 
