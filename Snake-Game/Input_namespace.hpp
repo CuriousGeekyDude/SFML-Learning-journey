@@ -14,5 +14,7 @@ namespace Input
 		void MoveDown(sf::Transformable& l_transformable);
 
 		sf::Keyboard::Key DetectArrowKey();
+
+		void HandleKeyboardInput(sf::Transformable& l_transformable);
 	}
 }
