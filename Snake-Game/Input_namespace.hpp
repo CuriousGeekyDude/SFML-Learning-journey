@@ -4,6 +4,7 @@
 
 namespace Input
 {
+	typedef sf::Keyboard Key;
 
 	void MoveRight(sf::Transformable& l_transformable);
 	void MoveLeft(sf::Transformable& l_transformable);
