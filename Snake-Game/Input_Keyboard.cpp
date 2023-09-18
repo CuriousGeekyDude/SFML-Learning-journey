@@ -37,5 +37,24 @@ namespace Input
 				return Key::Down;
 			}
 		}
+
+		void HandleKeyboardInput(sf::Transformable& l_transformable)
+		{
+			switch (DetectArrowKey()) {
+			case sf::Keyboard::Right:
+				MoveRight(l_transformable);
+				break;
+			case sf::Keyboard::Left:
+				MoveLeft(l_transformable);
+				break;
+			case sf::Keyboard::Up:
+				MoveUp(l_transformable);
+				break;
+			case sf::Keyboard::Down:
+				MoveDown(l_transformable);
+				break;
+			}
+		}
+
 	}
 }
