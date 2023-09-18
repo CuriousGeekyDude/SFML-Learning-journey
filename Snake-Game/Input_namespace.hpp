@@ -4,12 +4,15 @@
 
 namespace Input
 {
-	typedef sf::Keyboard Key;
+	namespace Keyboard
+	{
+		typedef sf::Keyboard Key;
 
-	void MoveRight(sf::Transformable& l_transformable);
-	void MoveLeft(sf::Transformable& l_transformable);
-	void MoveUp(sf::Transformable& l_transformable);
-	void MoveDown(sf::Transformable& l_transformable);
+		void MoveRight(sf::Transformable& l_transformable);
+		void MoveLeft(sf::Transformable& l_transformable);
+		void MoveUp(sf::Transformable& l_transformable);
+		void MoveDown(sf::Transformable& l_transformable);
 
-	sf::Keyboard::Key DetectArrowKey();
+		sf::Keyboard::Key DetectArrowKey();
+	}
 }
