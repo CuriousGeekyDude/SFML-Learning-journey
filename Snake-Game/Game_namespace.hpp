@@ -45,13 +45,13 @@ namespace Game
 		class Apple
 		{
 		public:
-			Apple(const sf::Texture& l_textureApple, const Random_generator::Float& l_randomFloat) :m_apple(l_textureApple), m_randomFloat(l_randomFloat) { SetRandomPosition(); }
+			Apple(const sf::Texture& l_textureApple, Random_generator::Float& l_randomFloat) :m_apple(l_textureApple), m_randomFloat(l_randomFloat) { SetRandomPosition(); }
 
 		private:
 			void SetRandomPosition();
 
 			sf::Sprite m_apple;
-			const Random_generator::Float& m_randomFloat;
+			Random_generator::Float& m_randomFloat;
 		};
 	}
 }
