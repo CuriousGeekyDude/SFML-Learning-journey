@@ -51,7 +51,7 @@ namespace Game
 			void SetRandomPosition();
 
 			sf::Sprite m_apple;
-			Random_generator::Float& m_randomFloat;
+			const Random_generator::Float& m_randomFloat;
 		};
 	}
 }
