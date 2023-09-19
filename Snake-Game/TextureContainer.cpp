@@ -9,8 +9,8 @@ namespace Game
 			for (int i = 0; i < 2; ++i) {
 				m_textureContainer.push_back(sf::Texture());
 			}
-			m_textureContainer[0].loadFromFile(l_pathApple);
-			m_textureContainer[1].loadFromFile(l_pathSquare);
+			m_textureContainer[0].loadFromFile(l_pathApple, sf::IntRect(0.f, 0.f, 8.f, 8.f));
+			m_textureContainer[1].loadFromFile(l_pathSquare, sf::IntRect(0.f, 0.f, 10.f, 10.f));
 		}
 		sf::Texture& TextureContainer::operator[](const int l_index)
 		{
