@@ -12,5 +12,22 @@ namespace Game
 			m_textureContainer[0].loadFromFile(l_pathApple);
 			m_textureContainer[1].loadFromFile(l_pathSquare);
 		}
+		sf::Texture& TextureContainer::operator[](const int l_index)
+		{
+			if (l_index < 0 || l_index > 1) {
+				throw "Out of Bounds index!";
+			}
+
+			return m_textureContainer[l_index];
+		}
+
+		const sf::Texture& TextureContainer::operator[](const int l_index) const
+		{
+			if (l_index < 0 || l_index > 1) {
+				throw "Out of Bounds index!";
+			}
+
+			return m_textureContainer[l_index];
+		}
 	}
 }
