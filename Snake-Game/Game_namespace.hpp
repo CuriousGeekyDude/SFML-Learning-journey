@@ -47,6 +47,8 @@ namespace Game
 		public:
 			Apple(const sf::Texture& l_textureApple, Random_generator::Float& l_randomFloat) :m_apple(l_textureApple), m_randomFloat(l_randomFloat) { SetRandomPosition(); }
 
+			sf::Sprite& GetAppleSprite() { return m_apple; }
+
 		private:
 			void SetRandomPosition();
 
