@@ -34,6 +34,10 @@ namespace Game
 		public:
 			TextureContainer(const std::string& l_pathApple, const std::string& l_pathSquare);
 
+			sf::Texture& operator[](const int l_index);
+			const sf::Texture& operator[](const int l_index) const;
+
+
 		private:
 			std::vector<sf::Texture> m_textureContainer;
 		};
