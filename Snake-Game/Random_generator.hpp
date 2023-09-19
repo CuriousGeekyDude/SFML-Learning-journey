@@ -22,7 +22,7 @@ namespace Random_generator
 	class Int
 	{
 	public:
-		Int(const int l_min, const float l_max):m_distribution(l_min,l_max) {}
+		Int(const int l_min, const int l_max):m_distribution(l_min,l_max) {}
 
 		int Generate();
 
