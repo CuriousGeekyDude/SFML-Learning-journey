@@ -49,6 +49,8 @@ namespace Game
 
 			sf::Sprite& GetAppleSprite() { return m_apple; }
 
+			void UpdatePosition();
+
 		private:
 			void SetRandomPosition();
 
