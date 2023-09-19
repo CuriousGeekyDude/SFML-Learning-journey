@@ -1,3 +1,8 @@
+#ifndef  INPUT_NAMESPACE_HPP
+#define INPUT_NAMESPACE_HPP
+
+
+
 #include "SFML/Graphics.hpp"
 #include "SFML/Window/Keyboard.hpp"
 
@@ -18,3 +23,5 @@ namespace Input
 		void HandleKeyboardInput(sf::Transformable& l_transformable);
 	}
 }
+
+#endif

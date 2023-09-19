@@ -1,3 +1,6 @@
+#ifndef RANDOM_GENERATOR_HPP
+#define RANDOM_GENERATOR_HPP
+
 #include <random>
 
 
@@ -29,3 +32,5 @@ namespace Random_generator
 		std::uniform_int_distribution<int> m_distribution;
 	};
 }
+
+#endif
