@@ -3,6 +3,7 @@
 
 #include "SFML/Graphics.hpp"
 #include "SFML/Window/Keyboard.hpp"
+#include "Random_generator.hpp"
 
 namespace Game
 {
@@ -29,13 +30,13 @@ namespace Game
 		class Apple
 		{
 		public:
-			Apple(const sf::Texture& l_textureApple) :m_textureApple(l_textureApple) { SetRandomPosition(); }
+			Apple(const sf::Texture& l_textureApple, const Random_generator::Float& l_randomFloat) :m_apple(l_textureApple), m_randomFloat(l_randomFloat) { SetRandomPosition(); }
 
 		private:
 			void SetRandomPosition();
 
-			sf::Sprite m_textureApple;
-			
+			sf::Sprite m_apple;
+			Random_generator::Float& m_randomFloat;
 		};
 	}
 }
