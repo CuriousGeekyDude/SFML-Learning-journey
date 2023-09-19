@@ -11,7 +11,7 @@ namespace Random_generator
 	public:
 		Float(const float l_min, const float l_max):m_distribution(l_min, l_max){}
 
-		float generate();
+		float Generate();
 
 
 	private:
@@ -24,7 +24,7 @@ namespace Random_generator
 	public:
 		Int(const int l_min, const float l_max):m_distribution(l_min,l_max) {}
 
-		int generate();
+		int Generate();
 
 
 	private:
