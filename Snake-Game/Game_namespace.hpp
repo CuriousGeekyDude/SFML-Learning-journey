@@ -4,6 +4,8 @@
 #include "SFML/Graphics.hpp"
 #include "SFML/Window/Keyboard.hpp"
 #include "Random_generator.hpp"
+#include <vector>
+#include <string>
 
 namespace Game
 {
@@ -27,6 +29,15 @@ namespace Game
 
 	namespace Objects
 	{
+		class TextureContainer
+		{
+		public:
+			TextureContainer(const std::string& l_pathApple, const std::string& l_pathSquare);
+
+		private:
+			std::vector<sf::Texture> m_textureContainer;
+		};
+
 		class Apple
 		{
 		public:
