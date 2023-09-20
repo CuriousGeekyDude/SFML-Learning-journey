@@ -80,7 +80,9 @@ namespace Game
 				Still
 			};
 
-			GreenSquare(const sf::Texture& l_squareTexture, const bool l_isHead, const GreenSquare& l_squareBefore) : m_squareSprite(l_squareTexture), m_position(m_squareSprite.getPosition()), m_isHead(l_isHead) {}
+			GreenSquare(const sf::Texture& l_squareTexture, const bool l_isHead, const GreenSquare& l_squareBefore) 
+		    : m_squareSprite(l_squareTexture), m_position(m_squareSprite.getPosition()), m_isHead(l_isHead) 
+			{ FindRelativePosition(); FindMovementDirection(); }
 
 
 			void FindRelativePosition();
