@@ -71,7 +71,14 @@ namespace Game
 				NotApplicable
 			};
 
-			
+			enum class MovementDirection	
+			{
+				MoveUp,
+				MoveDown,
+				MoveRight,
+				MoveLeft,
+				Still
+			};
 			
 
 		private:
