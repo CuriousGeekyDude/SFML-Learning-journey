@@ -91,6 +91,7 @@ namespace Game
 
 			RelativePosition GetRelativePosition();
 			MovementDirection GetMovementDirection();
+			sf::Vector2f GetPosition();
 
 
 			
