@@ -62,6 +62,7 @@ namespace Game
 		class GreenSquare
 		{
 		public:
+
 			enum class RelativePosition	//Relative position with respect to the green square that it is attached to
 			{
 				Up,
@@ -70,8 +71,8 @@ namespace Game
 				Left,
 				NotApplicable
 			};
-
-			enum class MovementDirection	
+			
+			enum class MovementDirection
 			{
 				MoveUp,
 				MoveDown,
@@ -79,10 +80,12 @@ namespace Game
 				MoveLeft,
 				Still
 			};
-			
 
 		private:
-			
+			sf::Vector2f m_position;
+			bool m_isHead;	//To know whether the square is at the head of the snake 
+			RelativePosition m_relativePosition{RelativePosition::NotApplicable};
+			MovementDirection m_movementDirection{MovementDirection::Still};
 
 		};
 
