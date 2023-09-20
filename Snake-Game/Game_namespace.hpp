@@ -80,7 +80,7 @@ namespace Game
 				Still
 			};
 
-			GreenSquare(const sf::Texture& l_squareTexture, const bool l_isHead) : m_squareSprite(l_squareTexture), m_position(m_squareSprite.getPosition()), m_isHead(l_isHead) {}
+			GreenSquare(const sf::Texture& l_squareTexture, const bool l_isHead, const GreenSquare& l_squareBefore) : m_squareSprite(l_squareTexture), m_position(m_squareSprite.getPosition()), m_isHead(l_isHead) {}
 
 
 			void FindRelativePosition();
@@ -97,8 +97,8 @@ namespace Game
 
 		private:
 			sf::Sprite m_squareSprite;
-			sf::Vector2f m_position;
-			bool m_isHead;	//To know whether the square is at the head of the snake 
+			sf::Vector2f m_position{sf::Vector2f(0.f,0.f)};
+			bool m_isHead = true;	//To know whether the square is at the head of the snake 
 			RelativePosition m_relativePosition{RelativePosition::NotApplicable};
 			MovementDirection m_movementDirection{MovementDirection::Still};
 
