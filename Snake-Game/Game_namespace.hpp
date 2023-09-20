@@ -80,13 +80,16 @@ namespace Game
 				Still
 			};
 
+
+			//l_squareBefore: This is the square that the current new square is attached to
+
 			GreenSquare(const sf::Texture& l_squareTexture, const bool l_isHead, const GreenSquare& l_squareBefore) 
 		    : m_squareSprite(l_squareTexture), m_position(m_squareSprite.getPosition()), m_isHead(l_isHead) 
-			{ FindRelativePosition(); FindMovementDirection(); }
+			{ FindRelativePosition(l_squareBefore); FindMovementDirection(l_squareBefore); }
 
 
-			void FindRelativePosition();
-			void FindMovementDirection();
+			void FindRelativePosition(const GreenSquare& l_squareBefore);
+			void FindMovementDirection(const GreenSquare& l_squareBefore);
 
 
 			void Move();
