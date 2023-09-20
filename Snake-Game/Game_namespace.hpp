@@ -88,15 +88,15 @@ namespace Game
 			{ FindRelativePosition(l_squareBefore); FindMovementDirection(l_squareBefore); }
 
 
-			void FindRelativePosition(const GreenSquare& l_squareBefore);
-			void FindMovementDirection(const GreenSquare& l_squareBefore);
+			void FindRelativePosition(const GreenSquare& l_squareBefore);	//NOT TESTED
+			void FindMovementDirection(const GreenSquare& l_squareBefore);	//NOT TESTED
 
 
 			void Move();
 
-			RelativePosition GetRelativePosition();
-			MovementDirection GetMovementDirection();
-			sf::Vector2f GetPosition();
+			RelativePosition GetRelativePosition() const { return m_relativePosition; }
+			MovementDirection GetMovementDirection() const { return m_movementDirection; }
+			sf::Vector2f GetPosition() const { return m_position; }
 
 
 			
