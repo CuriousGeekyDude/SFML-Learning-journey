@@ -29,6 +29,7 @@ namespace Game
 
 	namespace Objects
 	{
+
 		class TextureContainer
 		{
 		public:
@@ -57,6 +58,28 @@ namespace Game
 			sf::Sprite m_apple;
 			Random_generator::Float& m_randomFloat;
 		};
+
+		class GreenSquare
+		{
+		public:
+			enum class RelativePosition	//Relative position with respect to the green square that it is attached to
+			{
+				Up,
+				Down,
+				Right,
+				Left,
+				NotApplicable
+			};
+
+			
+			
+
+		private:
+			
+
+		};
+
+
 	}
 }
 
