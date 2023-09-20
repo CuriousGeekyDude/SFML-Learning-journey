@@ -71,6 +71,8 @@ namespace Game
 			void FindMovementDirection();
 
 
+			void Move();
+
 
 			enum class RelativePosition	//Relative position with respect to the green square that it is attached to
 			{
