@@ -67,8 +67,8 @@ namespace Game
 			GreenSquare(const sf::Texture& l_squareTexture, const bool l_isHead) : m_squareSprite(l_squareTexture), m_position(m_squareSprite.getPosition()), m_isHead(l_isHead) {}
 
 
-			
-
+			void FindRelativePosition();
+			void FindMovementDirection();
 
 
 
