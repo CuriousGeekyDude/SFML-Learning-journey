@@ -63,6 +63,13 @@ namespace Game
 		{
 		public:
 
+
+
+
+
+
+
+
 			enum class RelativePosition	//Relative position with respect to the green square that it is attached to
 			{
 				Up,
@@ -82,6 +89,7 @@ namespace Game
 			};
 
 		private:
+			sf::Sprite m_squareSprite;
 			sf::Vector2f m_position;
 			bool m_isHead;	//To know whether the square is at the head of the snake 
 			RelativePosition m_relativePosition{RelativePosition::NotApplicable};
