@@ -16,17 +16,29 @@
     <Filter Include="Source Files\Window">
       <UniqueIdentifier>{c8361b9e-250a-4f14-a95f-c2271f14dec7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Input">
-      <UniqueIdentifier>{d26d4958-85ff-45d1-9b7a-a3c3de8258c6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Input\Keyboard">
-      <UniqueIdentifier>{1db8bbc3-06df-4a04-9811-e2e69bca32c4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Input">
-      <UniqueIdentifier>{1a413cfc-eee5-4c88-ba45-89e583c98956}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Window">
       <UniqueIdentifier>{31ad501a-89af-4728-afd2-6ca7d271d331}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Random_generator">
+      <UniqueIdentifier>{a20f6b03-a21d-4557-ade4-cda0a8b0e10a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Random_generator">
+      <UniqueIdentifier>{868f8be2-658d-46b3-a203-73d1a3c57dea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{03145577-a373-4d54-b775-64466f315071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{3d0831d7-d51f-4ea3-91e1-8ccb259f37db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Input">
+      <UniqueIdentifier>{d26d4958-85ff-45d1-9b7a-a3c3de8258c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Input\Keyboard">
+      <UniqueIdentifier>{1db8bbc3-06df-4a04-9811-e2e69bca32c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Objects">
+      <UniqueIdentifier>{0bd694d9-72d2-46db-af77-787456d98a40}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -37,15 +49,30 @@
       <Filter>Source Files\Window</Filter>
     </ClCompile>
     <ClCompile Include="Input_Keyboard.cpp">
-      <Filter>Source Files\Input\Keyboard</Filter>
+      <Filter>Source Files\Game\Input\Keyboard</Filter>
     </ClCompile>
-    <ClCompile Include="Input_namespace.hpp">
-      <Filter>Header Files\Input</Filter>
+    <ClCompile Include="Float.cpp">
+      <Filter>Source Files\Random_generator</Filter>
+    </ClCompile>
+    <ClCompile Include="Int.cpp">
+      <Filter>Source Files\Random_generator</Filter>
+    </ClCompile>
+    <ClCompile Include="Apple.cpp">
+      <Filter>Source Files\Game\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureContainer.cpp">
+      <Filter>Source Files\Game\Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.hpp">
       <Filter>Header Files\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Random_generator.hpp">
+      <Filter>Header Files\Random_generator</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_namespace.hpp">
+      <Filter>Header Files\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
