@@ -62,7 +62,23 @@ namespace Game
 		class GreenSquare
 		{
 		public:
+			enum class RelativePosition	//Relative position with respect to the green square that it is attached to
+			{
+				Up,
+				Down,
+				Right,
+				Left,
+				NotApplicable
+			};
 
+			enum class MovementDirection
+			{
+				MoveUp,
+				MoveDown,
+				MoveRight,
+				MoveLeft,
+				Still
+			};
 
 			GreenSquare(const sf::Texture& l_squareTexture, const bool l_isHead) : m_squareSprite(l_squareTexture), m_position(m_squareSprite.getPosition()), m_isHead(l_isHead) {}
 
@@ -73,24 +89,11 @@ namespace Game
 
 			void Move();
 
+			RelativePosition GetRelativePosition();
+			MovementDirection GetMovementDirection();
 
-			enum class RelativePosition	//Relative position with respect to the green square that it is attached to
-			{
-				Up,
-				Down,
-				Right,
-				Left,
-				NotApplicable
-			};
+
 			
-			enum class MovementDirection
-			{
-				MoveUp,
-				MoveDown,
-				MoveRight,
-				MoveLeft,
-				Still
-			};
 
 		private:
 			sf::Sprite m_squareSprite;
