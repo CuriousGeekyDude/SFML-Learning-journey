@@ -88,9 +88,6 @@ namespace Game
 			{ UpdateRelativePosition(l_squareBefore); UpdateMovementDirection(l_squareBefore); }
 
 
-			void UpdateRelativePosition(const GreenSquare& l_squareBefore);	//NOT TESTED
-			void UpdateMovementDirection(const GreenSquare& l_squareBefore);	//NOT TESTED
-
 
 			
 
@@ -104,6 +101,9 @@ namespace Game
 			
 
 		private:
+
+			void UpdateRelativePosition(const GreenSquare& l_squareBefore);	//NOT TESTED
+			void UpdateMovementDirection(const GreenSquare& l_squareBefore);	//NOT TESTED
 
 			void Set_RelativePosUpMovementDir(const GreenSquare& l_squareBefore);
 			void Set_RelativePosDownMovementDir(const GreenSquare& l_squareBefore);
