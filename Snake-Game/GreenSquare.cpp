@@ -8,11 +8,11 @@ namespace Game
 		{
 			if (m_position.x == m_squareBefore.GetPosition().x) {
 				
-				if (m_position.y == l_squareBefore.GetPosition().y) {
+				if (m_position.y == m_squareBefore.GetPosition().y) {
 					throw "1)Two Green squares overlap!";
 				}
 
-				if (m_position.y < l_squareBefore.GetPosition().y) {
+				if (m_position.y < m_squareBefore.GetPosition().y) {
 					m_relativePosition = RelativePosition::Up;	//The positive y-axis is downward
 				}
 				else {
@@ -23,12 +23,12 @@ namespace Game
 			}
 
 
-			if (m_position.y == l_squareBefore.GetPosition().y) {
-				if (m_position.x == l_squareBefore.GetPosition().x) {
+			if (m_position.y == m_squareBefore.GetPosition().y) {
+				if (m_position.x == m_squareBefore.GetPosition().x) {
 					throw "2)Two Green squares overlap!";
 				}
 
-				if (m_position.x < l_squareBefore.GetPosition().x) {
+				if (m_position.x < m_squareBefore.GetPosition().x) {
 					m_relativePosition = RelativePosition::Left;
 				}
 				else {
