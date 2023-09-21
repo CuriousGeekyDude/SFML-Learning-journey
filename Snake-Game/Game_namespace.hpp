@@ -85,12 +85,14 @@ namespace Game
 
 			GreenSquare(const sf::Texture& l_squareTexture, const bool l_isHead, const GreenSquare& l_squareBefore) 
 		    : m_squareSprite(l_squareTexture), m_position(m_squareSprite.getPosition()), m_isHead(l_isHead) 
-			{ FindRelativePosition(l_squareBefore); FindMovementDirection(l_squareBefore); }
+			{ UpdateRelativePosition(l_squareBefore); UpdateMovementDirection(l_squareBefore); }
 
 
-			void FindRelativePosition(const GreenSquare& l_squareBefore);	//NOT TESTED
-			void FindMovementDirection(const GreenSquare& l_squareBefore);	//NOT TESTED
+			void UpdateRelativePosition(const GreenSquare& l_squareBefore);	//NOT TESTED
+			void UpdateMovementDirection(const GreenSquare& l_squareBefore);	//NOT TESTED
 
+
+			
 
 			void Move();
 
@@ -102,6 +104,13 @@ namespace Game
 			
 
 		private:
+
+			void Set_RelativePosUpMovementDir(const GreenSquare& l_squareBefore);
+			void Set_RelativePosDownMovementDir(const GreenSquare& l_squareBefore);
+			void Set_RelativePosRightMovementDir(const GreenSquare& l_squareBefore);
+			void Set_RelativePosLeftMovementDir(const GreenSquare& l_squareBefore);
+
+
 			sf::Sprite m_squareSprite;
 			sf::Vector2f m_position{sf::Vector2f(0.f,0.f)};
 			bool m_isHead = true;	//To know whether the square is at the head of the snake 
