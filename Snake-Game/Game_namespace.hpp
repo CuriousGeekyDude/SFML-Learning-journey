@@ -83,15 +83,15 @@ namespace Game
 
 			//l_squareBefore: This is the square that the current new square is attached to
 
-			GreenSquare(const sf::Texture& l_squareTexture, const bool l_isHead, const GreenSquare& l_squareBefore) 
-		    : m_squareSprite(l_squareTexture), m_position(m_squareSprite.getPosition()), m_isHead(l_isHead) 
-			{ UpdateRelativePosition(l_squareBefore); UpdateMovementDirection(l_squareBefore); }
+			GreenSquare(const sf::Texture& l_squareTexture, const bool l_isHead, GreenSquare& l_squareBefore) 
+		    :m_squareBefore(l_squareBefore), m_squareSprite(l_squareTexture), m_position(m_squareSprite.getPosition()), m_isHead(l_isHead)
+			{ UpdateRelativePosition(); UpdateMovementDirection(); }
 
 
 
 			
 
-			void Move(const GreenSquare& l_squareBefore);
+			void Move();
 
 			RelativePosition GetRelativePosition() const { return m_relativePosition; }
 			MovementDirection GetMovementDirection() const { return m_movementDirection; }
@@ -102,15 +102,15 @@ namespace Game
 
 		private:
 
-			void UpdateRelativePosition(const GreenSquare& l_squareBefore);	//NOT TESTED
-			void UpdateMovementDirection(const GreenSquare& l_squareBefore);	//NOT TESTED
+			void UpdateRelativePosition();	//NOT TESTED
+			void UpdateMovementDirection();	//NOT TESTED
 
-			void Set_RelativePosUpMovementDir(const GreenSquare& l_squareBefore);
-			void Set_RelativePosDownMovementDir(const GreenSquare& l_squareBefore);
-			void Set_RelativePosRightMovementDir(const GreenSquare& l_squareBefore);
-			void Set_RelativePosLeftMovementDir(const GreenSquare& l_squareBefore);
+			void Set_RelativePosUpMovementDir();
+			void Set_RelativePosDownMovementDir();
+			void Set_RelativePosRightMovementDir();
+			void Set_RelativePosLeftMovementDir();
 
-
+			GreenSquare& m_squareBefore;
 			sf::Sprite m_squareSprite;
 			sf::Vector2f m_position{sf::Vector2f(0.f,0.f)};
 			bool m_isHead = true;	//To know whether the square is at the head of the snake 

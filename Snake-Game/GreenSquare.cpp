@@ -4,9 +4,9 @@ namespace Game
 {
 	namespace Objects
 	{
-		void GreenSquare::UpdateRelativePosition(const GreenSquare& l_squareBefore)
+		void GreenSquare::UpdateRelativePosition()
 		{
-			if (m_position.x == l_squareBefore.GetPosition().x) {
+			if (m_position.x == m_squareBefore.GetPosition().x) {
 				
 				if (m_position.y == l_squareBefore.GetPosition().y) {
 					throw "1)Two Green squares overlap!";
@@ -37,33 +37,33 @@ namespace Game
 			}
 		}
 
-		void GreenSquare::UpdateMovementDirection(const GreenSquare& l_squareBefore)
+		void GreenSquare::UpdateMovementDirection()
 		{
 			switch (m_relativePosition) {
 				case RelativePosition::Up:
-					Set_RelativePosUpMovementDir(l_squareBefore);
+					Set_RelativePosUpMovementDir();
 					break;
 
 				case RelativePosition::Down:
-					Set_RelativePosDownMovementDir(l_squareBefore);
+					Set_RelativePosDownMovementDir();
 					break;
 
 				case RelativePosition::Right:
-					Set_RelativePosRightMovementDir(l_squareBefore);
+					Set_RelativePosRightMovementDir();
 					break;
 
 				case RelativePosition::Left:
-					Set_RelativePosLeftMovementDir(l_squareBefore);
+					Set_RelativePosLeftMovementDir();
 					break;
 			}
 		}
 
 
 
-		void GreenSquare::Move(const GreenSquare& l_squareBefore)
+		void GreenSquare::Move()
 		{
-			UpdateRelativePosition(l_squareBefore);
-			UpdateMovementDirection(l_squareBefore);
+			UpdateRelativePosition();
+			UpdateMovementDirection();
 
 			switch (m_movementDirection) {
 				case MovementDirection::MoveUp:
@@ -83,9 +83,9 @@ namespace Game
 
 
 
-		void GreenSquare::Set_RelativePosUpMovementDir(const GreenSquare& l_squareBefore)
+		void GreenSquare::Set_RelativePosUpMovementDir()
 		{
-			switch (l_squareBefore.GetMovementDirection()) {
+			switch (m_squareBefore.GetMovementDirection()) {
 			case MovementDirection::MoveDown:
 			case MovementDirection::MoveRight:
 			case MovementDirection::MoveLeft:
@@ -93,9 +93,9 @@ namespace Game
 				break;
 			}
 		}
-		void GreenSquare::Set_RelativePosDownMovementDir(const GreenSquare& l_squareBefore)
+		void GreenSquare::Set_RelativePosDownMovementDir()
 		{
-				switch (l_squareBefore.GetMovementDirection()) {
+				switch (m_squareBefore.GetMovementDirection()) {
 				case MovementDirection::MoveUp:
 				case MovementDirection::MoveRight:
 				case MovementDirection::MoveLeft:
@@ -103,9 +103,9 @@ namespace Game
 					break;
 				}
 		}
-		void GreenSquare::Set_RelativePosRightMovementDir(const GreenSquare& l_squareBefore)
+		void GreenSquare::Set_RelativePosRightMovementDir()
 		{
-			switch (l_squareBefore.GetMovementDirection()) {
+			switch (m_squareBefore.GetMovementDirection()) {
 			case MovementDirection::MoveLeft:
 			case MovementDirection::MoveUp:
 			case MovementDirection::MoveDown:
@@ -113,9 +113,9 @@ namespace Game
 				break;
 			}
 		}
-		void GreenSquare::Set_RelativePosLeftMovementDir(const GreenSquare& l_squareBefore)
+		void GreenSquare::Set_RelativePosLeftMovementDir()
 		{
-			switch (l_squareBefore.GetMovementDirection()) {
+			switch (m_squareBefore.GetMovementDirection()) {
 			case MovementDirection::MoveUp:
 			case MovementDirection::MoveDown:
 			case MovementDirection::MoveRight:
