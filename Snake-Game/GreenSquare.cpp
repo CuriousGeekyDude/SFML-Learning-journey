@@ -58,6 +58,31 @@ namespace Game
 			}
 		}
 
+
+
+		void GreenSquare::Move(const GreenSquare& l_squareBefore)
+		{
+			UpdateRelativePosition(l_squareBefore);
+			UpdateMovementDirection(l_squareBefore);
+
+			switch (m_movementDirection) {
+				case MovementDirection::MoveUp:
+					Input::Keyboard::MoveUp(m_squareSprite);
+					break;
+				case MovementDirection::MoveDown:
+					Input::Keyboard::MoveDown(m_squareSprite);
+					break;
+				case MovementDirection::MoveRight:
+					Input::Keyboard::MoveRight(m_squareSprite);
+					break;
+				case MovementDirection::MoveLeft:
+					Input::Keyboard::MoveLeft(m_squareSprite);
+					break;
+			}
+		}
+
+
+
 		void GreenSquare::Set_RelativePosUpMovementDir(const GreenSquare& l_squareBefore)
 		{
 			switch (l_squareBefore.GetMovementDirection()) {

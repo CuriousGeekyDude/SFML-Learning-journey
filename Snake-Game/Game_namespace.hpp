@@ -94,7 +94,7 @@ namespace Game
 
 			
 
-			void Move();
+			void Move(const GreenSquare& l_squareBefore);
 
 			RelativePosition GetRelativePosition() const { return m_relativePosition; }
 			MovementDirection GetMovementDirection() const { return m_movementDirection; }
