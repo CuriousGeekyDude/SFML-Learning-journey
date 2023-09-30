@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{a6c7ab3c-a5b8-4e45-a6df-d8bd66257e2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\GameObjects">
+      <UniqueIdentifier>{64158552-f8e7-439f-9396-3f2bb33aea0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Window">
+      <UniqueIdentifier>{c343f26d-6d7f-4f63-a029-58aa9b9009ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Window">
+      <UniqueIdentifier>{ead9e9e4-adde-4fdc-99a7-b39bd61fdc34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Input">
+      <UniqueIdentifier>{5832bc08-d99f-4089-9445-5c49b6abcb60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Input\Keyboard">
+      <UniqueIdentifier>{2a770531-f2bb-4ae0-a6ca-83451adcde20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RandomGenerator">
+      <UniqueIdentifier>{acf90a3e-8de6-43d5-942d-dde562aeee90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RandomGenerator">
+      <UniqueIdentifier>{97e74033-bed4-4d6f-9faa-367e4b04cd13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{597084c9-a5f5-4ee4-9497-0b81ba6e7c88}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Window.hpp">
+      <Filter>Header Files\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomGenerator.hpp">
+      <Filter>Header Files\RandomGenerator</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.hpp">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Snake.cpp">
+      <Filter>Source Files\Game\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Source Files\Game\Input\Keyboard</Filter>
+    </ClCompile>
+    <ClCompile Include="Apple.cpp">
+      <Filter>Source Files\Game\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Float.cpp">
+      <Filter>Source Files\RandomGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="Int.cpp">
+      <Filter>Source Files\RandomGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="SnakeGame.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
