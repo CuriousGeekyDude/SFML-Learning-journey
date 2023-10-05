@@ -63,6 +63,12 @@
     <ClCompile Include="TextureContainer.cpp">
       <Filter>Source Files\Game\Objects</Filter>
     </ClCompile>
+    <ClCompile Include="GreenSquare.cpp">
+      <Filter>Source Files\Game\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Snake.cpp">
+      <Filter>Source Files\Game\Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.hpp">

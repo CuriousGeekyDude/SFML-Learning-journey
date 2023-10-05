@@ -7,22 +7,22 @@ namespace Game{
 		namespace Keyboard {
 
 			void MoveRight(sf::Transformable& l_transformable) {
-				l_transformable.move(sf::Vector2f(0.2f, 0.f));
+				l_transformable.move(sf::Vector2f(10.f, 0.f));
 			}
 
 			void MoveLeft(sf::Transformable& l_transformable)
 			{
-				l_transformable.move(sf::Vector2f(-0.2f, 0.f));
+				l_transformable.move(sf::Vector2f(-0.3f, 0.f));
 			}
 
 			void MoveUp(sf::Transformable& l_transformable)
 			{
-				l_transformable.move(sf::Vector2f(0.f, -0.2f));
+				l_transformable.move(sf::Vector2f(0.f, -0.3f));
 			}
 
 			void MoveDown(sf::Transformable& l_transformable)
 			{
-				l_transformable.move(sf::Vector2f(0.f, 0.2f));
+				l_transformable.move(sf::Vector2f(0.f, 0.3f));
 			}
 
 			sf::Keyboard::Key DetectArrowKey()
@@ -39,6 +39,7 @@ namespace Game{
 				else if (sf::Keyboard::isKeyPressed(Key::Down)) {
 					return Key::Down;
 				}
+				return Key::Unknown;	//This was added to make sure the return of function is not undefined
 			}
 
 			void HandleKeyboardInput(sf::Transformable& l_transformable)

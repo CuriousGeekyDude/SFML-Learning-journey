@@ -1,5 +1,4 @@
-#ifndef WINDOW_HPP
-#define WINDOW_HPP
+#pragma once
 
 #include <string>
 #include <SFML/Graphics.hpp>
@@ -17,7 +16,7 @@ public:
 	void Update();
 	bool IsDone();
 	bool IsFullscreen();
-	sf::Vector2u GetWindowSize();
+	sf::Vector2u& GetWindowSize();
 	void ToggleFullscreen();
 	void Draw(sf::Drawable& l_drawable);
 
@@ -36,5 +35,3 @@ private:
 	bool m_isFullscreen;
 };
 
-
-#endif

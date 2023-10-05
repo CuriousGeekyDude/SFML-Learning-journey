@@ -11,9 +11,11 @@ namespace Game
 {
 	namespace Input
 	{
+		typedef sf::Keyboard Key;
+
 		namespace Keyboard
 		{
-			typedef sf::Keyboard Key;
+
 
 			void MoveRight(sf::Transformable& l_transformable);
 			void MoveLeft(sf::Transformable& l_transformable);
@@ -83,9 +85,11 @@ namespace Game
 
 			//l_squareBefore: This is the square that the current new square is attached to
 
-			GreenSquare(const sf::Texture& l_squareTexture, const bool l_isHead, GreenSquare& l_squareBefore) 
-		    :m_squareBefore(l_squareBefore), m_squareSprite(l_squareTexture), m_position(m_squareSprite.getPosition()), m_isHead(l_isHead)
-			{ UpdateRelativePosition(); UpdateMovementDirection(); }
+			GreenSquare(const sf::Texture& l_squareTexture, const bool l_isHead, GreenSquare* l_squareBefore) 
+		    :m_squareBefore(l_squareBefore), m_squareSprite(l_squareTexture), m_isHead(l_isHead)
+			{
+				InitializePosition(); UpdateRelativePosition(); UpdateMovementDirection();
+			}
 
 
 
@@ -96,21 +100,23 @@ namespace Game
 			RelativePosition GetRelativePosition() const { return m_relativePosition; }
 			MovementDirection GetMovementDirection() const { return m_movementDirection; }
 			sf::Vector2f GetPosition() const { return m_position; }
+			sf::Sprite& GetSquareSprite() { return m_squareSprite; };
 
-
-			
+			void SetMovementDirection_Still() { m_movementDirection = MovementDirection::Still; }
 
 		private:
 
 			void UpdateRelativePosition();	//NOT TESTED
 			void UpdateMovementDirection();	//NOT TESTED
+			void InitializePosition();
+			void UpdatePosition() { m_position = m_squareSprite.getPosition(); }
 
 			void Set_RelativePosUpMovementDir();
 			void Set_RelativePosDownMovementDir();
 			void Set_RelativePosRightMovementDir();
 			void Set_RelativePosLeftMovementDir();
 
-			GreenSquare& m_squareBefore;
+			GreenSquare* m_squareBefore;
 			sf::Sprite m_squareSprite;
 			sf::Vector2f m_position{sf::Vector2f(0.f,0.f)};
 			bool m_isHead = true;	//To know whether the square is at the head of the snake 
@@ -119,6 +125,23 @@ namespace Game
 
 		};
 
+
+		class Snake
+		{
+		public:
+
+			Snake(const sf::Texture& l_textureSquare, const int l_lengthOfSnake = 2);
+
+
+			void Move();
+
+			std::vector<GreenSquare>& GetSquareContainer() { return m_greenSquareContainer; }
+
+
+		private:
+			std::vector<GreenSquare> m_greenSquareContainer;
+
+		};
 
 	}
 }

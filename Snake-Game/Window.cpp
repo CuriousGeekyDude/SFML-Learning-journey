@@ -42,7 +42,7 @@ bool Window::IsFullscreen()
 	return m_isFullscreen;
 }
 
-sf::Vector2u Window::GetWindowSize()
+sf::Vector2u& Window::GetWindowSize()
 {
 	return m_windowSize;
 }
